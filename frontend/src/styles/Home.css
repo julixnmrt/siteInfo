@@ -1,0 +1,57 @@
+.page-container {
+  display: flex;                         /* Utilise Flexbox pour organiser les colonnes horizontalement */
+  height: 100vh;                         /* Hauteur = 100% de la fenêtre (viewport height) */
+  gap: 16px;                             /* Espace de 16px entre les colonnes */
+  padding: 16px;                         /* Marge intérieure de 16px tout autour */
+  background-color: #f0f2f5;           /* Couleur de fond gris clair */
+  box-sizing: border-box;                /* Inclut padding et bordures dans les dimensions */
+}
+
+.left-column, .middle-column {
+  background: white;                      /* Fond blanc pour chaque colonne */
+  border-radius: 8px;                       /* Coins arrondis de 8px */
+  padding: 16px;                            /* Marge intérieure de 16px */
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1); /* Ombre légère pour un effet "carte"/surélévation */
+  overflow-y: auto;
+}
+
+/* Définition des largeurs relatives de chaque colonne */
+.left-column {
+  flex: 1;                              /* Prend 1 part de l'espace disponible */
+  max-width: 320px;                     /* Ne peut pas dépasser 300px de large */
+}
+
+.middle-column {
+  flex: 2;                              /* Prend 2 parts de l'espace disponible (plus large) */
+}
+
+
+/*Definition de la colonne de droite*/
+.right-column {
+  flex: 1;
+  max-width: 320px;
+  display: flex;              /* Active le mode flex à l'intérieur */
+  flex-direction: column;     /* Aligne les enfants verticalement */
+  gap: 16px;                  /* Espace entre les deux boîtes */
+}
+
+.right-column-up{
+    max-height: 450px;
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    flex: 1;                    /* Prend 50% de l’espace vertical de .right-column */
+    overflow: auto;             /* Permet le scroll interne si le contenu dépasse */
+}
+
+.right-column-down {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0; /* ou rien du tout */
+  background: none;
+  box-shadow: none;
+  border-radius: 24px;
+}

@@ -1,0 +1,56 @@
+.todo-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: transparent; /* plus de fond coloré */
+  border-radius: 0;              /* plus de coins arrondis */
+  box-shadow: none;              /* plus d’ombre portée */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Input & bouton */
+.todo-container ,.ant-btn-primary ,.ant-input{
+  margin-top: 8px;
+  border-radius: 0 6px 6px 0;
+}
+
+/* Texte de tâche */
+.todo-container .ant-typography {
+  font-size: 14px;
+}
+
+/* Icône de drag */
+.todo-container .anticon-menu {
+  cursor: grab;
+  font-size: 16px;
+  color: #999;
+}
+
+/* Élément de tâche */
+.todo-container .todo-item {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: background 0.2s ease;
+}
+
+.todo-container .todo-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Texte barré si tâche complétée */
+.todo-container .ant-typography[delete] {
+  color: #999;
+}
+
+/* Texte "Aucune tâche" */
+.todo-container .ant-typography-secondary {
+  font-style: italic;
+  text-align: center;
+  display: block;
+  margin-top: 16px;
+}
